@@ -85,35 +85,35 @@ struct NowView: View {
         
         // TODO: make it better 
         
-//        Button("Add Live Activity"){
-//            let scheduleLive = SimpleSchedule(subjectName: schedule.subject?.name ?? "x", start: schedule.start, end: schedule.end, type: schedule.type, room: schedule.room)
-//            
-//            var nextLive: SimpleSchedule?
-//            
-//            if(next != nil){
-//                nextLive = SimpleSchedule(subjectName: next?.subject?.name ?? "x", start: next?.start ?? Date(), end: next?.end ?? Date(), type: next?.type ?? "x", room: next?.room ?? "x")
-//            } else {
-//                nextLive = nil
-//            }
-//            
-//            LiveActivityManager.shared.startActivity(state: TimetableWidgetAttributes.ContentState(schedule: scheduleLive, nextSchedule: nextLive))
-//        }
-//        .buttonStyle(.borderedProminent)
-//        
-//        Button("Edit Live Activity"){
-//            let scheduleLive = SimpleSchedule(subjectName: "DZIAŁA", start: schedule.start, end: schedule.end, type: schedule.type, room: schedule.room)
-//            
-//            var nextLive: SimpleSchedule?
-//            
-//            if(next != nil){
-//                nextLive = SimpleSchedule(subjectName: "DZIAŁA!", start: next?.start ?? Date(), end: next?.end ?? Date(), type: next?.type ?? "x", room: next?.room ?? "x")
-//            } else {
-//                nextLive = nil
-//            }
-//            
-//            LiveActivityManager.shared.updateActivity(state: TimetableWidgetAttributes.ContentState(schedule: scheduleLive, nextSchedule: nextLive))
-//        }
-//        .buttonStyle(.borderedProminent)
+        Button("Add Live Activity"){
+            let scheduleLive = SimpleSchedule(subjectName: schedule.subject?.name ?? "x", start: schedule.start, end: schedule.end, type: schedule.type, room: schedule.room)
+            
+            var nextLive: SimpleSchedule?
+            
+            if(next != nil){
+                nextLive = SimpleSchedule(subjectName: next?.subject?.name ?? "x", start: next?.start ?? Date(), end: next?.end ?? Date(), type: next?.type ?? "x", room: next?.room ?? "x")
+            } else {
+                nextLive = nil
+            }
+            
+            LiveActivityManager.shared.startActivity(state: TimetableWidgetAttributes.ContentState(schedule: scheduleLive, nextSchedule: nextLive))
+        }
+        .buttonStyle(.borderedProminent)
+        
+        Button("Edit Live Activity"){
+            let scheduleLive = SimpleSchedule(subjectName: "DZIAŁA", start: schedule.start, end: schedule.end, type: schedule.type, room: schedule.room)
+            
+            var nextLive: SimpleSchedule?
+            
+            if(next != nil){
+                nextLive = SimpleSchedule(subjectName: "DZIAŁA!", start: next?.start ?? Date(), end: next?.end ?? Date(), type: next?.type ?? "x", room: next?.room ?? "x")
+            } else {
+                nextLive = nil
+            }
+            
+            LiveActivityManager.shared.updateActivity(state: TimetableWidgetAttributes.ContentState(schedule: scheduleLive, nextSchedule: nextLive))
+        }
+        .buttonStyle(.borderedProminent)
     }
     
     private func UpdateData(){
